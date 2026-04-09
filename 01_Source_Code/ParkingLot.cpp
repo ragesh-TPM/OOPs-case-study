@@ -57,9 +57,9 @@ void ParkingLot::parkVehicle(const std::string& vehicleNumber) {
     
     slots[slotIndex].parkVehicle(vehicleNumber);
     time_t entryTime = slots[slotIndex].getEntryTime();
-    std::cout << "\n✅ Vehicle " << vehicleNumber 
+    std::cout << "\nVehicle " << vehicleNumber 
               << " parked successfully at Slot " << (slotIndex + 1) << "!" << std::endl;
-    std::cout << "⏰ Entry Time: " 
+    std::cout << "Entry Time: " 
               << std::ctime(&entryTime);
 }
 
@@ -67,26 +67,26 @@ void ParkingLot::exitVehicle(const std::string& vehicleNumber) {
     int slotIndex = findVehicleSlot(vehicleNumber);
     
     if (slotIndex == -1) {
-        std::cout << "❌ Vehicle " << vehicleNumber << " not found in parking lot!" << std::endl;
+        std::cout << "Vehicle " << vehicleNumber << " not found in parking lot!" << std::endl;
         return;
     }
     
     double fee = slots[slotIndex].calculateFee();
     time_t entryTime = slots[slotIndex].getEntryTime();
     
-    std::cout << "\n🚗 Vehicle Exit Details:" << std::endl;
+    std::cout << "\nVehicle Exit Details:" << std::endl;
     std::cout << "Vehicle: " << vehicleNumber << std::endl;
     std::cout << "Slot: " << (slotIndex + 1) << std::endl;
     std::cout << "Entry Time: " << std::ctime(&entryTime);
     std::cout << "Total Fee: $" << std::fixed << std::setprecision(2) << fee << std::endl;
-    std::cout << "💰 Please pay $" << std::fixed << std::setprecision(2) << fee << std::endl;
+    std::cout << "Please pay $" << std::fixed << std::setprecision(2) << fee << std::endl;
     
     slots[slotIndex].exitVehicle();
-    std::cout << "✅ Vehicle exited successfully!" << std::endl;
+    std::cout << "Vehicle exited successfully!" << std::endl;
 }
 
 void ParkingLot::displayStatus() const {
-    std::cout << "\n📊 PARKING LOT STATUS (" << capacity << " slots):" << std::endl;
+    std::cout << "\nPARKING LOT STATUS (" << capacity << " slots):" << std::endl;
     std::cout << std::left << std::setw(8) << "Slot" 
               << std::setw(12) << "Status" 
               << std::setw(15) << "Vehicle #" 
@@ -111,12 +111,12 @@ void ParkingLot::displayStatus() const {
     for (const auto& slot : slots) {
         if (slot.isOccupied()) occupiedCount++;
     }
-    std::cout << "\n📈 Occupancy: " << occupiedCount << "/" << capacity 
+    std::cout << "\nOccupancy: " << occupiedCount << "/" << capacity 
               << " (" << (occupiedCount * 100.0 / capacity) << "%)" << std::endl;
 }
 
 void ParkingLot::displayAvailableSlots() const {
-    std::cout << "\n🅿️  AVAILABLE SLOTS:" << std::endl;
+    std::cout << "\nAVAILABLE SLOTS:" << std::endl;
     bool hasAvailable = false;
     for (int i = 0; i < capacity; ++i) {
         if (!slots[i].isOccupied()) {
