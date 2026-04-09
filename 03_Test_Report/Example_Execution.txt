@@ -1,38 +1,41 @@
-=====================================
-       SMART PARKING LOT SYSTEM      
-=====================================
+=== SMART PARKING LOT SYSTEM ===
+1. Initialize Parking Lot
+Enter choice: 1
+Parking lot initialized with 20 spots!
 
---- MAIN MENU ---
-1. Park Vehicle (Entry)
-2. Exit Vehicle (Calculate Fee)
-3. Display Parking Status
-4. Display Available Slots
-5. Exit Program
-Enter your choice (1-5): 1
-Enter vehicle number: ABC123
+=== SMART PARKING LOT SYSTEM ===
+Enter choice: 4
+Enter parking hours: 3
+Vehicle parked in V1 (VIP parking spot - $10 + $5/hour (premium))
 
-✅ Vehicle ABC123 parked successfully at Slot 1!
-⏰ Entry Time: Wed Dec  6 10:30:45 2023
+=== SMART PARKING LOT SYSTEM ===
+Enter choice: 6
+
+=== PARKING LOT STATUS ===
+==================================================
+Spot ID: S1, Type: Standard, Status: AVAILABLE
+Spot ID: S2, Type: Standard, Status: AVAILABLE
 ...
-
---- MAIN MENU ---
-Enter your choice (1-5): 3
-
-📊 PARKING LOT STATUS (10 slots):
-Slot     Status      Vehicle #     Entry Time
--------------------------------------------------------
-1        OCCUPIED    ABC123        Wed Dec  6 10:30:45 2023
-2        AVAILABLE   -             -
+Spot ID: V1, Type: VIP, Status: OCCUPIED
 ...
+==================================================
+Total Spots: 20
+Occupied Spots: 1
+Occupancy: 5.0%
+==================================================
 
---- MAIN MENU ---
-Enter your choice (1-5): 2
-Enter vehicle number to exit: ABC123
+=== SMART PARKING LOT SYSTEM ===
+Enter choice: 5
+Enter Spot ID (e.g., V1, S5, D2): V1
+Enter parking hours: 2
+Vehicle exited from V1 (VIP)
+Parking duration: 2 hours
+Total fee: $20.00
+--------------------------------------------------
 
-🚗 Vehicle Exit Details:
-Vehicle: ABC123
-Slot: 1
-Entry Time: Wed Dec  6 10:30:45 2023
-Total Fee: $2.50
-💰 Please pay $2.50
-✅ Vehicle exited successfully!
+=== PARKING LOT STATUS ===
+Spot ID: V1, Type: VIP, Status: AVAILABLE
+...
+Total Spots: 20
+Occupied Spots: 0
+Occupancy: 0.0%
