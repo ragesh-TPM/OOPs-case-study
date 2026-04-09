@@ -1,0 +1,38 @@
+=====================================
+       SMART PARKING LOT SYSTEM      
+=====================================
+
+--- MAIN MENU ---
+1. Park Vehicle (Entry)
+2. Exit Vehicle (Calculate Fee)
+3. Display Parking Status
+4. Display Available Slots
+5. Exit Program
+Enter your choice (1-5): 1
+Enter vehicle number: ABC123
+
+✅ Vehicle ABC123 parked successfully at Slot 1!
+⏰ Entry Time: Wed Dec  6 10:30:45 2023
+...
+
+--- MAIN MENU ---
+Enter your choice (1-5): 3
+
+📊 PARKING LOT STATUS (10 slots):
+Slot     Status      Vehicle #     Entry Time
+-------------------------------------------------------
+1        OCCUPIED    ABC123        Wed Dec  6 10:30:45 2023
+2        AVAILABLE   -             -
+...
+
+--- MAIN MENU ---
+Enter your choice (1-5): 2
+Enter vehicle number to exit: ABC123
+
+🚗 Vehicle Exit Details:
+Vehicle: ABC123
+Slot: 1
+Entry Time: Wed Dec  6 10:30:45 2023
+Total Fee: $2.50
+💰 Please pay $2.50
+✅ Vehicle exited successfully!

@@ -1,0 +1,52 @@
+SMART PARKING LOT SYSTEM
+=======================
+
+OVERVIEW
+--------
+This C++ console application simulates a smart parking lot management system with real-time 
+slot allocation, entry/exit tracking, and dynamic fee calculation.
+
+KEY FEATURES
+------------
+1. 🅿️  Dynamic Slot Allocation (First-available algorithm)
+2. ⏰ Real-time Entry Time Recording using <ctime>
+3. 💰 Fee Calculation: $2 first hour + $1 per additional hour
+4. 📊 Real-time Status Monitoring & Occupancy Statistics
+5. 🚗 Vehicle Entry/Exit Management
+6. 🔍 Available Slot Display
+
+PROGRAM FLOW
+------------
+1. Initialize ParkingLot with capacity (10 slots)
+2. Main Menu Loop:
+   - Park Vehicle → Find available slot → Record entry time
+   - Exit Vehicle → Calculate duration → Compute fee → Free slot
+   - Display Status → Show all slots with occupancy details
+   - Show Available Slots
+
+CLASS STRUCTURE
+---------------
+ParkingSlot Class:
+- Properties: vehicleNumber, entryTime, occupied status
+- Methods: parkVehicle(), exitVehicle(), calculateFee()
+
+ParkingLot Class:
+- Properties: vector<ParkingSlot>, capacity
+- Methods: parkVehicle(), exitVehicle(), displayStatus()
+
+FEE CALCULATION ALGORITHM
+-------------------------
+fee = 2.0 + max(0, hours-1) * 1.0
+Where hours = difftime(currentTime, entryTime) / 3600.0
+
+SAMPLE EXECUTION
+----------------
+See 03_Test_Report/Example_Execution.txt
+
+COMPILATION
+-----------
+g++ -o parkinglot main.cpp ParkingLot.cpp
+
+RUN
+---
+./parkinglot
