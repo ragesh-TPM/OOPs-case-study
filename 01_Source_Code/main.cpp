@@ -1,3 +1,5 @@
+// this is the main program file
+
 #include "ParkingLot.h"
 #include <iostream>
 #include <iomanip>
